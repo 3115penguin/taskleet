@@ -1,6 +1,17 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(
-                "p9hp[8h08[08g[8g88352ii");
+        int[] nums = {1, 2, 3, 1};
+        System.out.println(containsDuplicate(nums));
+    }
+    public static boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                return true;
+            }
+        }
+        return false;
     }
 }
